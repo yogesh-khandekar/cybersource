@@ -1,0 +1,132 @@
+deployAs:
+  - name: cybersource-service
+    applicationType: service
+    endpoint: /cybersource-service
+    scripts:
+      postDeploy: npm install --loglevel verbose  && npm run build --loglevel verbose
+    configuration:
+      standardConfiguration:
+        - key: CONFIG_PORT
+          description: Port configuration for the service
+          required: false
+        - key: PAYMENT_GATEWAY_EXTENSION_DESTINATION_URL
+          description: URL for the payment gateway extension destination
+          required: false
+        - key: PAYMENT_GATEWAY_EXTENSION_HEADER_VALUE
+          description: Header value for the payment gateway extension
+          required: false
+        - key: PAYMENT_GATEWAY_RUN_ENVIRONMENT
+          description: Environment in which the payment gateway runs
+          required: false
+        - key: PAYMENT_GATEWAY_ENABLE_DEBUG
+          description: Enable debug mode for the payment gateway
+          required: false
+        - key: PAYMENT_GATEWAY_TARGET_ORIGINS
+          description: Allowed target origins for the payment gateway
+          required: false
+        - key: PAYMENT_GATEWAY_VERIFICATION_KEY
+          description: Verification key for the payment gateway
+          required: false
+        - key: PAYMENT_GATEWAY_CC_ALLOWED_CARD_NETWORKS
+          description: Allowed card networks for credit card payments
+          required: false
+        - key: PAYMENT_GATEWAY_3DS_RETURN_URL
+          description: Return URL for 3DS authentication
+          required: false
+        - key: PAYMENT_GATEWAY_SCA_CHALLENGE
+          description: SCA challenge configuration
+          required: false
+        - key: PAYMENT_GATEWAY_ORDER_RECONCILIATION
+          description: Order reconciliation configuration
+          required: false
+        - key: PAYMENT_GATEWAY_WHITELIST_URLS
+          description: Whitelisted URLs for the payment gateway
+          required: false
+        - key: PAYMENT_GATEWAY_APPLE_PAY_DOMAIN_NAME
+          description: Domain name for Apple Pay
+          required: false
+        - key: PAYMENT_GATEWAY_APPLE_PAY_MERCHANT_ID
+          description: Merchant ID for Apple Pay
+          required: false
+        - key: PAYMENT_GATEWAY_APPLE_PAY_CERTIFICATE_PATH
+          description: Certificate path for Apple Pay
+          required: false
+        - key: PAYMENT_GATEWAY_APPLE_PAY_KEY_PATH
+          description: Key path for Apple Pay
+          required: false
+        - key: PAYMENT_GATEWAY_ENABLE_RATE_LIMITER
+          description: Enable rate limiter for the payment gateway
+          required: false
+        - key: PAYMENT_GATEWAY_LIMIT_SAVED_CARD_RATE
+          description: Rate limit for saved cards
+          required: false
+        - key: PAYMENT_GATEWAY_SAVED_CARD_LIMIT_FRAME
+          description: Time frame for saved card rate limit
+          required: false
+        - key: PAYMENT_GATEWAY_DECISION_SYNC
+          description: Decision sync configuration
+          required: false
+        - key: PAYMENT_GATEWAY_DECISION_MANAGER
+          description: Decision manager configuration
+          required: false
+        - key: PAYMENT_GATEWAY_RUN_SYNC
+          description: Run sync configuration
+          required: false
+        - key: PAYMENT_GATEWAY_DECISION_SYNC_MULTI_MID
+          description: Multi MID decision sync configuration
+          required: false
+        - key: PAYMENT_GATEWAY_NETWORK_TOKEN_MULTI_MID
+          description: Multi MID network token configuration
+          required: false
+        - key: PAYMENT_GATEWAY_UC_ALLOWED_PAYMENTS
+          description: Allowed payment methods for UC
+          required: false
+        - key: PAYMENT_GATEWAY_UC_BILLING_TYPE
+          description: Billing type for UC
+          required: false
+        - key: PAYMENT_GATEWAY_UC_ENABLE_PHONE
+          description: Enable phone for UC
+          required: false
+        - key: PAYMENT_GATEWAY_UC_ENABLE_EMAIL
+          description: Enable email for UC
+          required: false
+        - key: PAYMENT_GATEWAY_UC_ENABLE_NETWORK_ICONS
+          description: Enable network icons for UC
+          required: false
+        - key: PAYMENT_GATEWAY_UC_ENABLE_SHIPPING
+          description: Enable shipping for UC
+          required: false
+        - key: PAYMENT_GATEWAY_UC_ALLOWED_SHIP_TO_COUNTRIES
+          description: Allowed ship-to countries for UC
+          required: false
+        - key: PAYMENT_GATEWAY_SERVERLESS_DEPLOYMENT
+          description: Serverless deployment configuration
+          required: false
+        - key: FUNCTIONS_HTTPWORKER_PORT
+          description: Port for HTTP worker functions
+          required: false
+        - key: CT_AUTH_HOST
+          description: Auth host for commercetools
+          required: false
+        - key: CT_API_HOST
+          description: API host for commercetools
+          required: false
+      securedConfiguration:
+        - key: CT_PROJECT_KEY
+          description: Project key for commercetools
+          required: false
+        - key: CT_CLIENT_ID
+          description: Client ID for commercetools
+          required: false
+        - key: CT_CLIENT_SECRET
+          description: Client secret for commercetools
+          required: false
+        - key: PAYMENT_GATEWAY_MERCHANT_ID
+          description: Merchant ID for the payment gateway
+          required: false
+        - key: PAYMENT_GATEWAY_MERCHANT_KEY_ID
+          description: Merchant key ID for the payment gateway
+          required: false
+        - key: PAYMENT_GATEWAY_MERCHANT_SECRET_KEY
+          description: Merchant secret key for the payment gateway
+          required: false
